@@ -50,6 +50,24 @@ class MainViewController: UITableViewController {
         newPlaceVC.saveNewPlace() 
         tableView.reloadData()
     }
+    
+    // MARK: - Table view delegate
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let place = places[indexPath.row]
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {_,_,_ in
+            
+            StorageManager.deleteObject(place)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
+        let swipe = UISwipeActionsConfiguration(actions: [deleteAction])
+        
+        return swipe
+    }
+    
+    
+
 
 
     /*
