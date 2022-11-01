@@ -145,6 +145,28 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="6Js-3y-Uh8">
+                                        <rect key="frame" x="0.0" y="525" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Js-3y-Uh8" id="2ga-t8-0wo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s0W-UI-ChQ" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s0W-UI-ChQ" firstAttribute="centerX" secondItem="2ga-t8-0wo" secondAttribute="centerX" id="9Ww-A0-gQH"/>
+                                                <constraint firstItem="s0W-UI-ChQ" firstAttribute="centerY" secondItem="2ga-t8-0wo" secondAttribute="centerY" id="gy1-ha-M0y"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -278,7 +300,7 @@
                             <constraint firstItem="rxb-HO-7PH" firstAttribute="leading" secondItem="TgY-Jy-p7H" secondAttribute="leading" id="b6v-CD-Vkx"/>
                             <constraint firstItem="rxb-HO-7PH" firstAttribute="trailing" secondItem="TgY-Jy-p7H" secondAttribute="trailing" id="bxB-Qy-gXN"/>
                             <constraint firstItem="rxb-HO-7PH" firstAttribute="top" secondItem="daB-P7-OGS" secondAttribute="bottom" constant="1" id="e2J-2n-af8"/>
-                            <constraint firstAttribute="bottom" secondItem="rxb-HO-7PH" secondAttribute="bottom" id="euC-v0-3kL"/>
+                            <constraint firstItem="rxb-HO-7PH" firstAttribute="bottom" secondItem="5R5-hN-bP8" secondAttribute="bottom" id="euC-v0-3kL"/>
                             <constraint firstItem="rxb-HO-7PH" firstAttribute="top" secondItem="daB-P7-OGS" secondAttribute="bottom" constant="1" id="pHY-Vg-EOd"/>
                             <constraint firstItem="rxb-HO-7PH" firstAttribute="trailing" secondItem="TgY-Jy-p7H" secondAttribute="trailing" id="xiJ-8V-k3W"/>
                         </constraints>
@@ -343,6 +365,11 @@
             <point key="canvasLocation" x="2242" y="-770"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="s0W-UI-ChQ">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="B4b-yn-h3c"/>
     </inferredMetricsTieBreakers>
