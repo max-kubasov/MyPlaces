@@ -186,9 +186,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rxb-HO-7PH">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-HO-7PH">
                                 <rect key="frame" x="0.0" y="130" width="414" height="766"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="e8r-6v-6zL" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
@@ -253,7 +252,7 @@
                                     <outlet property="prefetchDataSource" destination="5R5-hN-bP8" id="HsT-GM-i0x"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="daB-P7-OGS">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="daB-P7-OGS">
                                 <rect key="frame" x="0.0" y="98" width="414" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="jNj-Em-PDl"/>
@@ -270,7 +269,18 @@
                         <viewLayoutGuide key="safeArea" id="TgY-Jy-p7H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="daB-P7-OGS" firstAttribute="leading" secondItem="TgY-Jy-p7H" secondAttribute="leading" id="7pB-pN-xNC"/>
+                            <constraint firstItem="rxb-HO-7PH" firstAttribute="top" secondItem="daB-P7-OGS" secondAttribute="bottom" constant="1" id="AXN-9q-sTZ"/>
+                            <constraint firstItem="daB-P7-OGS" firstAttribute="trailing" secondItem="TgY-Jy-p7H" secondAttribute="trailing" id="CoI-ea-gWq"/>
+                            <constraint firstItem="rxb-HO-7PH" firstAttribute="leading" secondItem="TgY-Jy-p7H" secondAttribute="leading" id="IiG-JO-Rzb"/>
+                            <constraint firstItem="daB-P7-OGS" firstAttribute="top" secondItem="TgY-Jy-p7H" secondAttribute="top" constant="6" id="SVg-Np-8ez"/>
+                            <constraint firstAttribute="bottom" secondItem="rxb-HO-7PH" secondAttribute="bottom" id="UAh-Ii-qT1"/>
+                            <constraint firstItem="rxb-HO-7PH" firstAttribute="leading" secondItem="TgY-Jy-p7H" secondAttribute="leading" id="b6v-CD-Vkx"/>
+                            <constraint firstItem="rxb-HO-7PH" firstAttribute="trailing" secondItem="TgY-Jy-p7H" secondAttribute="trailing" id="bxB-Qy-gXN"/>
+                            <constraint firstItem="rxb-HO-7PH" firstAttribute="top" secondItem="daB-P7-OGS" secondAttribute="bottom" constant="1" id="e2J-2n-af8"/>
+                            <constraint firstAttribute="bottom" secondItem="rxb-HO-7PH" secondAttribute="bottom" id="euC-v0-3kL"/>
                             <constraint firstItem="rxb-HO-7PH" firstAttribute="top" secondItem="daB-P7-OGS" secondAttribute="bottom" constant="1" id="pHY-Vg-EOd"/>
+                            <constraint firstItem="rxb-HO-7PH" firstAttribute="trailing" secondItem="TgY-Jy-p7H" secondAttribute="trailing" id="xiJ-8V-k3W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="mN0-7n-5qu">
