@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24E692EDDC5C2497B1F329DD /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E6DF6D03B2682647BC9A675 /* Pods_MyPlaces.framework */; };
 		5075CC4B290BA65900D5F741 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075CC4A290BA65900D5F741 /* StorageManager.swift */; };
 		5082A7F529056DC3006E7227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082A7F429056DC3006E7227 /* AppDelegate.swift */; };
 		5082A7F729056DC3006E7227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082A7F629056DC3006E7227 /* SceneDelegate.swift */; };
@@ -19,10 +18,10 @@
 		5082A80D290857F5006E7227 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082A80C290857F5006E7227 /* PlaceModel.swift */; };
 		5082A80F29092403006E7227 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082A80E29092403006E7227 /* NewPlaceViewController.swift */; };
 		50A34D44291135DF0060296F /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A34D43291135DF0060296F /* RatingControl.swift */; };
+		6816DF51E1C60350C0D39E0D /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31DEF04EE7D95286E975D51 /* Pods_MyPlaces.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2EA6787891D5558D54A943F8 /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 		5075CC4A290BA65900D5F741 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		5082A7F129056DC3006E7227 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5082A7F429056DC3006E7227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,8 +35,9 @@
 		5082A80C290857F5006E7227 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		5082A80E29092403006E7227 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		50A34D43291135DF0060296F /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
-		6E6DF6D03B2682647BC9A675 /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFA6EFCC95ACE198BCAE3AD4 /* Pods-MyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.release.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.release.xcconfig"; sourceTree = "<group>"; };
+		B31DEF04EE7D95286E975D51 /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E02EF29DD694DBDC8A400DA7 /* Pods-MyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.release.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.release.xcconfig"; sourceTree = "<group>"; };
+		E16A79A579CF94760F9423AB /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,13 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24E692EDDC5C2497B1F329DD /* Pods_MyPlaces.framework in Frameworks */,
+				6816DF51E1C60350C0D39E0D /* Pods_MyPlaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		434C07034226AB5C485DC96A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B31DEF04EE7D95286E975D51 /* Pods_MyPlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5082A7E829056DC3006E7227 = {
 			isa = PBXGroup;
 			children = (
@@ -59,7 +67,7 @@
 				5082A7F329056DC3006E7227 /* MyPlaces */,
 				5082A7F229056DC3006E7227 /* Products */,
 				BCF141A09A36FBF8978D938D /* Pods */,
-				8A3BCDF9840F5A78D5A00874 /* Frameworks */,
+				434C07034226AB5C485DC96A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,19 +97,11 @@
 			path = MyPlaces;
 			sourceTree = "<group>";
 		};
-		8A3BCDF9840F5A78D5A00874 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6E6DF6D03B2682647BC9A675 /* Pods_MyPlaces.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BCF141A09A36FBF8978D938D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2EA6787891D5558D54A943F8 /* Pods-MyPlaces.debug.xcconfig */,
-				EFA6EFCC95ACE198BCAE3AD4 /* Pods-MyPlaces.release.xcconfig */,
+				E16A79A579CF94760F9423AB /* Pods-MyPlaces.debug.xcconfig */,
+				E02EF29DD694DBDC8A400DA7 /* Pods-MyPlaces.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -113,11 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5082A80529056DC5006E7227 /* Build configuration list for PBXNativeTarget "MyPlaces" */;
 			buildPhases = (
-				90089C2B555B0EBC3ACEA4C1 /* [CP] Check Pods Manifest.lock */,
+				71DE411FD0FEFD50B212E041 /* [CP] Check Pods Manifest.lock */,
 				5082A7ED29056DC3006E7227 /* Sources */,
 				5082A7EE29056DC3006E7227 /* Frameworks */,
 				5082A7EF29056DC3006E7227 /* Resources */,
-				5F37F8F0D5A5F096B92A7F12 /* [CP] Embed Pods Frameworks */,
+				21DFCD63F9CA139A33A603F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,24 +175,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F37F8F0D5A5F096B92A7F12 /* [CP] Embed Pods Frameworks */ = {
+		21DFCD63F9CA139A33A603F3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPlaces/Pods-MyPlaces-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPlaces/Pods-MyPlaces-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPlaces/Pods-MyPlaces-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		90089C2B555B0EBC3ACEA4C1 /* [CP] Check Pods Manifest.lock */ = {
+		71DE411FD0FEFD50B212E041 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -370,7 +369,7 @@
 		};
 		5082A80629056DC5006E7227 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EA6787891D5558D54A943F8 /* Pods-MyPlaces.debug.xcconfig */;
+			baseConfigurationReference = E16A79A579CF94760F9423AB /* Pods-MyPlaces.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -400,7 +399,7 @@
 		};
 		5082A80729056DC5006E7227 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFA6EFCC95ACE198BCAE3AD4 /* Pods-MyPlaces.release.xcconfig */;
+			baseConfigurationReference = E02EF29DD694DBDC8A400DA7 /* Pods-MyPlaces.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
