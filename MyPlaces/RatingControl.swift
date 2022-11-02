@@ -19,11 +19,12 @@ import UIKit
         }
     }
     
-    @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
+    @IBInspectable var starSize: CGSize = CGSize(width: 45.0, height: 45.0) {
         didSet {
             setupButtons()
         }
     }
+    
     @IBInspectable var starCount: Int = 5 {
         didSet {
             setupButtons()
