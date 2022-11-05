@@ -168,7 +168,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s0W-UI-ChQ" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
-                                                    <rect key="frame" x="78.5" y="47.5" width="257" height="45"/>
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                             <integer key="value" value="5"/>
@@ -244,14 +244,21 @@
                         <viewLayoutGuide key="safeArea" id="IEz-tF-gOY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Qqi-OW-QvM" firstAttribute="top" secondItem="02r-mN-0rm" secondAttribute="top" id="35w-cf-iWO"/>
                             <constraint firstItem="Qqi-OW-QvM" firstAttribute="leading" secondItem="IEz-tF-gOY" secondAttribute="leading" id="4xW-3L-ayf"/>
                             <constraint firstItem="Qqi-OW-QvM" firstAttribute="top" secondItem="02r-mN-0rm" secondAttribute="top" id="ACJ-or-Fm4"/>
                             <constraint firstAttribute="bottom" secondItem="Qqi-OW-QvM" secondAttribute="bottom" id="KEb-Kx-dJf"/>
                             <constraint firstItem="Qqi-OW-QvM" firstAttribute="trailing" secondItem="IEz-tF-gOY" secondAttribute="trailing" id="Ofg-bm-pFJ"/>
                             <constraint firstItem="Wok-xN-MDy" firstAttribute="top" secondItem="IEz-tF-gOY" secondAttribute="top" constant="20" id="Vqr-Yb-N5o"/>
+                            <constraint firstItem="Qqi-OW-QvM" firstAttribute="leading" secondItem="IEz-tF-gOY" secondAttribute="leading" id="bhP-eY-w3G"/>
+                            <constraint firstItem="Qqi-OW-QvM" firstAttribute="bottom" secondItem="IEz-tF-gOY" secondAttribute="bottom" id="cbw-Hd-cp6"/>
                             <constraint firstItem="IEz-tF-gOY" firstAttribute="trailing" secondItem="Wok-xN-MDy" secondAttribute="trailing" constant="20" id="qgX-D3-TsS"/>
+                            <constraint firstItem="Qqi-OW-QvM" firstAttribute="trailing" secondItem="IEz-tF-gOY" secondAttribute="trailing" id="wYq-dx-9Ce"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Qqi-OW-QvM" id="1iW-Em-9Yc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9z-st-pyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
