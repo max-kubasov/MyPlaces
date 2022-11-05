@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		506FBAE22916BDBA006E599F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506FBAE12916BDBA006E599F /* MapViewController.swift */; };
 		5075CC4B290BA65900D5F741 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075CC4A290BA65900D5F741 /* StorageManager.swift */; };
 		5082A7F529056DC3006E7227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082A7F429056DC3006E7227 /* AppDelegate.swift */; };
 		5082A7F729056DC3006E7227 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082A7F629056DC3006E7227 /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		506FBAE12916BDBA006E599F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5075CC4A290BA65900D5F741 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		5082A7F129056DC3006E7227 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5082A7F429056DC3006E7227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				50A34D43291135DF0060296F /* RatingControl.swift */,
 				5082A7F629056DC3006E7227 /* SceneDelegate.swift */,
 				5082A7FA29056DC3006E7227 /* Main.storyboard */,
+				506FBAE12916BDBA006E599F /* MapViewController.swift */,
 				5082A80E29092403006E7227 /* NewPlaceViewController.swift */,
 				5082A7FD29056DC5006E7227 /* Assets.xcassets */,
 				5082A7FF29056DC5006E7227 /* LaunchScreen.storyboard */,
@@ -226,6 +229,7 @@
 				5082A80F29092403006E7227 /* NewPlaceViewController.swift in Sources */,
 				5082A7F529056DC3006E7227 /* AppDelegate.swift in Sources */,
 				5075CC4B290BA65900D5F741 /* StorageManager.swift in Sources */,
+				506FBAE22916BDBA006E599F /* MapViewController.swift in Sources */,
 				50A34D44291135DF0060296F /* RatingControl.swift in Sources */,
 				5082A80D290857F5006E7227 /* PlaceModel.swift in Sources */,
 				5082A80B29083050006E7227 /* CustomTableViewCell.swift in Sources */,
