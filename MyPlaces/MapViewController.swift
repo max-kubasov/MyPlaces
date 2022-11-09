@@ -14,6 +14,7 @@ class MapViewController: UIViewController {
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
+    let regionInMeters = 10_000.0
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -24,7 +25,16 @@ class MapViewController: UIViewController {
         checkLocationServices()
     }
     
-
+    @IBAction func centerViewInUserLocation() {
+        
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionInMeters,
+                                            longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
     @IBAction func closeVC() {
         dismiss(animated: true)
     }
@@ -66,7 +76,12 @@ class MapViewController: UIViewController {
             setupLocationManager()
             checkLocationAutorization()
         } else {
-            // Alert controller
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(
+                    title: "Your Location is not Availeble",
+                    message: "To give permission Go to: Setting → Privasy → Location Services and turn On"
+                )
+            }
         }
     }
     
@@ -95,6 +110,15 @@ class MapViewController: UIViewController {
             print("New case is avaible")
         }
         
+    }
+    
+    private func showAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 
 

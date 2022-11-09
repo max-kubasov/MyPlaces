@@ -240,13 +240,27 @@
                                     <action selector="closeVC" destination="YTX-la-xkX" eventType="touchUpInside" id="pPb-9V-orh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVz-4Q-hDp">
+                                <rect key="frame" x="324" y="708" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="NgK-Hh-yXa"/>
+                                    <constraint firstAttribute="height" constant="50" id="j7x-0j-AXX"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="Location"/>
+                                <connections>
+                                    <action selector="centerViewInUserLocation" destination="YTX-la-xkX" eventType="touchUpInside" id="vQs-Oc-6pB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IEz-tF-gOY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="IEz-tF-gOY" firstAttribute="trailing" secondItem="aVz-4Q-hDp" secondAttribute="trailing" constant="40" id="0aV-tH-5mK"/>
                             <constraint firstItem="Qqi-OW-QvM" firstAttribute="top" secondItem="02r-mN-0rm" secondAttribute="top" id="35w-cf-iWO"/>
                             <constraint firstItem="Qqi-OW-QvM" firstAttribute="leading" secondItem="IEz-tF-gOY" secondAttribute="leading" id="4xW-3L-ayf"/>
                             <constraint firstItem="Qqi-OW-QvM" firstAttribute="top" secondItem="02r-mN-0rm" secondAttribute="top" id="ACJ-or-Fm4"/>
+                            <constraint firstItem="IEz-tF-gOY" firstAttribute="bottom" secondItem="aVz-4Q-hDp" secondAttribute="bottom" constant="80" id="CIV-vR-K7K"/>
                             <constraint firstAttribute="bottom" secondItem="Qqi-OW-QvM" secondAttribute="bottom" id="KEb-Kx-dJf"/>
                             <constraint firstItem="Qqi-OW-QvM" firstAttribute="trailing" secondItem="IEz-tF-gOY" secondAttribute="trailing" id="Ofg-bm-pFJ"/>
                             <constraint firstItem="Wok-xN-MDy" firstAttribute="top" secondItem="IEz-tF-gOY" secondAttribute="top" constant="20" id="Vqr-Yb-N5o"/>
@@ -327,6 +341,12 @@
                                                         <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M13-ql-35i">
+                                                    <rect key="frame" x="326" y="51" width="75" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="ndV-Et-kcv" secondAttribute="bottom" constant="8" id="3dr-DM-Mc8"/>
@@ -459,6 +479,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="Location" width="128" height="128"/>
         <image name="add_image" width="512" height="512"/>
         <image name="cancel" width="192" height="192"/>
         <image name="emptyStar" width="255" height="256"/>
