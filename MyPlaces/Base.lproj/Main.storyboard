@@ -126,7 +126,7 @@
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" image="Pin"/>
                                                     <connections>
-                                                        <segue destination="YTX-la-xkX" kind="presentation" identifier="getAdress" id="6oZ-fs-Mx3"/>
+                                                        <segue destination="YTX-la-xkX" kind="presentation" identifier="getAddress" id="6oZ-fs-Mx3"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -317,7 +317,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adressLabel" destination="WjH-vF-Ik6" id="8HV-N3-OxY"/>
+                        <outlet property="addressLabel" destination="WjH-vF-Ik6" id="8HV-N3-OxY"/>
                         <outlet property="doneButton" destination="L4p-nd-HxC" id="fdz-dv-bEy"/>
                         <outlet property="mapPinImage" destination="RXl-xI-fQU" id="3LO-22-9RB"/>
                         <outlet property="mapView" destination="Qqi-OW-QvM" id="1iW-Em-9Yc"/>
@@ -518,7 +518,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="h5T-Ce-apd"/>
+        <segue reference="6oZ-fs-Mx3"/>
         <segue reference="B4b-yn-h3c"/>
     </inferredMetricsTieBreakers>
     <resources>
