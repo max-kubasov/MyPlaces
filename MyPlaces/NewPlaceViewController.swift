@@ -78,7 +78,7 @@ class NewPlaceViewController: UITableViewController {
         mapVC.incomeSegueIdentifier = identifier
         mapVC.mapViewControllerDelegate = self
         
-        if identifier == "showPlase" {
+        if identifier == "showPlace" {
             mapVC.place.name = placeName.text!
             mapVC.place.type = placeLocation.text!
             mapVC.place.location = placeLocation.text!
