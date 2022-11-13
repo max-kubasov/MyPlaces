@@ -15,28 +15,42 @@ class MapViewController: UIViewController {
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
     let regionInMeters = 10_000.0
+    var incomeSegueIdentifier = ""
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapPinImage: UIImageView!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var adressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        adressLabel.text = ""
         mapView.delegate = self
-        setupPlacemark()
+        setupMapView()
         checkLocationServices()
     }
     
     @IBAction func centerViewInUserLocation() {
         
-        if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion(center: location,
-                                            latitudinalMeters: regionInMeters,
-                                            longitudinalMeters: regionInMeters)
-            mapView.setRegion(region, animated: true)
-        }
+        showUserLocation()
+    }
+    
+    @IBAction func doneButtonPresed() {
     }
     
     @IBAction func closeVC() {
         dismiss(animated: true)
+    }
+    
+    private func setupMapView() {
+        
+        if incomeSegueIdentifier == "showPlace" {
+            setupPlacemark()
+            mapPinImage.isHidden = true
+            doneButton.isHidden = true
+            adressLabel.isHidden = true
+        }
     }
     
     private func setupPlacemark() {
@@ -94,6 +108,7 @@ class MapViewController: UIViewController {
         switch locationManager.authorizationStatus {
         case .authorizedWhenInUse:
             mapView.showsUserLocation = true
+            if incomeSegueIdentifier == "getAdress" { showUserLocation() }
             break
         case .denied:
             // Show alert controller
@@ -110,6 +125,23 @@ class MapViewController: UIViewController {
             print("New case is avaible")
         }
         
+    }
+    
+    private func showUserLocation() {
+        
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionInMeters,
+                                            longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    private func getCenterLocation(for mapView: MKMapView) -> CLLocation {
+        
+        let latitude = mapView.centerCoordinate.latitude
+        let longitude = mapView.centerCoordinate.longitude
+        return CLLocation(latitude: latitude, longitude: longitude)
     }
     
     private func showAlert(title: String, message: String) {
@@ -145,11 +177,43 @@ extension MapViewController: MKMapViewDelegate {
             imageView.image = UIImage(data: imageData)
             annotationView?.rightCalloutAccessoryView = imageView
         }
-        
-
-
-
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        
+        let center = getCenterLocation(for: mapView)
+        let geocoder = CLGeocoder()
+        
+        geocoder.reverseGeocodeLocation(center) { (placemarks, error) in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let placemarks = placemarks else { return }
+            
+            let placemark = placemarks.first
+            let streetName = placemark?.thoroughfare
+            let buildNumber = placemark?.subThoroughfare
+            
+            DispatchQueue.main.async {
+                
+                if streetName != nil && buildNumber != nil {
+                    self.adressLabel.text = "\(streetName!), \(buildNumber!)"
+                } else if streetName != nil {
+                    self.adressLabel.text = "\(streetName!)"
+                } else {
+                    self.adressLabel.text = ""
+                }
+                
+            }
+            
+            
+            
+            
+        }
     }
 }
 
