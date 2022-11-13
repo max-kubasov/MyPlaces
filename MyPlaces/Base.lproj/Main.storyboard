@@ -183,7 +183,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s0W-UI-ChQ" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
-                                                    <rect key="frame" x="78.5" y="47.5" width="257" height="45"/>
+                                                    <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                             <integer key="value" value="5"/>
@@ -291,6 +291,18 @@
                                     <action selector="centerViewInUserLocation" destination="YTX-la-xkX" eventType="touchUpInside" id="vQs-Oc-6pB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ec-Ut-Wwv">
+                                <rect key="frame" x="182" y="748" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="G5K-Mg-fM8"/>
+                                    <constraint firstAttribute="height" constant="50" id="Qty-Eq-DI3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GetDirection"/>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="YTX-la-xkX" eventType="touchUpInside" id="i0F-Rn-zId"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IEz-tF-gOY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -314,11 +326,14 @@
                             <constraint firstItem="IEz-tF-gOY" firstAttribute="trailing" secondItem="Wok-xN-MDy" secondAttribute="trailing" constant="20" id="qgX-D3-TsS"/>
                             <constraint firstItem="IEz-tF-gOY" firstAttribute="bottom" secondItem="aVz-4Q-hDp" secondAttribute="bottom" constant="174" id="rG4-qe-PqN"/>
                             <constraint firstItem="Qqi-OW-QvM" firstAttribute="trailing" secondItem="IEz-tF-gOY" secondAttribute="trailing" id="wYq-dx-9Ce"/>
+                            <constraint firstItem="IEz-tF-gOY" firstAttribute="bottom" secondItem="0Ec-Ut-Wwv" secondAttribute="bottom" constant="40" id="y3O-iH-aAR"/>
+                            <constraint firstItem="0Ec-Ut-Wwv" firstAttribute="centerX" secondItem="02r-mN-0rm" secondAttribute="centerX" id="yNf-zH-g1g"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="WjH-vF-Ik6" id="8HV-N3-OxY"/>
                         <outlet property="doneButton" destination="L4p-nd-HxC" id="fdz-dv-bEy"/>
+                        <outlet property="goButton" destination="0Ec-Ut-Wwv" id="bB3-a7-m3u"/>
                         <outlet property="mapPinImage" destination="RXl-xI-fQU" id="3LO-22-9RB"/>
                         <outlet property="mapView" destination="Qqi-OW-QvM" id="1iW-Em-9Yc"/>
                     </connections>
@@ -518,11 +533,12 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="6oZ-fs-Mx3"/>
+        <segue reference="h5T-Ce-apd"/>
         <segue reference="B4b-yn-h3c"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Location" width="128" height="128"/>
         <image name="Pin" width="42" height="42"/>
         <image name="add_image" width="512" height="512"/>
