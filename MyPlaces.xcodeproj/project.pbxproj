@@ -19,6 +19,7 @@
 		5082A80D290857F5006E7227 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082A80C290857F5006E7227 /* PlaceModel.swift */; };
 		5082A80F29092403006E7227 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5082A80E29092403006E7227 /* NewPlaceViewController.swift */; };
 		50A34D44291135DF0060296F /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A34D43291135DF0060296F /* RatingControl.swift */; };
+		50E8CC542923686700F0F393 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E8CC532923686700F0F393 /* MapManager.swift */; };
 		6816DF51E1C60350C0D39E0D /* Pods_MyPlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31DEF04EE7D95286E975D51 /* Pods_MyPlaces.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		5082A80C290857F5006E7227 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		5082A80E29092403006E7227 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		50A34D43291135DF0060296F /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		50E8CC532923686700F0F393 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		B31DEF04EE7D95286E975D51 /* Pods_MyPlaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPlaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02EF29DD694DBDC8A400DA7 /* Pods-MyPlaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.release.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.release.xcconfig"; sourceTree = "<group>"; };
 		E16A79A579CF94760F9423AB /* Pods-MyPlaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPlaces.debug.xcconfig"; path = "Target Support Files/Pods-MyPlaces/Pods-MyPlaces.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,7 +67,6 @@
 		5082A7E829056DC3006E7227 = {
 			isa = PBXGroup;
 			children = (
-				5075CC4A290BA65900D5F741 /* StorageManager.swift */,
 				5082A7F329056DC3006E7227 /* MyPlaces */,
 				5082A7F229056DC3006E7227 /* Products */,
 				BCF141A09A36FBF8978D938D /* Pods */,
@@ -84,20 +85,62 @@
 		5082A7F329056DC3006E7227 /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				5082A7F429056DC3006E7227 /* AppDelegate.swift */,
-				5082A8082905974C006E7227 /* MainViewController.swift */,
-				5082A80C290857F5006E7227 /* PlaceModel.swift */,
-				5082A80A29083050006E7227 /* CustomTableViewCell.swift */,
-				50A34D43291135DF0060296F /* RatingControl.swift */,
+				50E8CC55292382AC00F0F393 /* ViewControllers */,
+				50E8CC572923831800F0F393 /* Helpers */,
+				50E8CC562923830700F0F393 /* Models */,
+				50E8CC582923834400F0F393 /* Support Files */,
+				50E8CC592923838D00F0F393 /* IBuilder */,
 				5082A7F629056DC3006E7227 /* SceneDelegate.swift */,
-				5082A7FA29056DC3006E7227 /* Main.storyboard */,
-				506FBAE12916BDBA006E599F /* MapViewController.swift */,
-				5082A80E29092403006E7227 /* NewPlaceViewController.swift */,
-				5082A7FD29056DC5006E7227 /* Assets.xcassets */,
-				5082A7FF29056DC5006E7227 /* LaunchScreen.storyboard */,
 				5082A80229056DC5006E7227 /* Info.plist */,
 			);
 			path = MyPlaces;
+			sourceTree = "<group>";
+		};
+		50E8CC55292382AC00F0F393 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5082A8082905974C006E7227 /* MainViewController.swift */,
+				5082A80E29092403006E7227 /* NewPlaceViewController.swift */,
+				506FBAE12916BDBA006E599F /* MapViewController.swift */,
+				5082A80A29083050006E7227 /* CustomTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		50E8CC562923830700F0F393 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5082A80C290857F5006E7227 /* PlaceModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50E8CC572923831800F0F393 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5075CC4A290BA65900D5F741 /* StorageManager.swift */,
+				50E8CC532923686700F0F393 /* MapManager.swift */,
+				50A34D43291135DF0060296F /* RatingControl.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		50E8CC582923834400F0F393 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5082A7F429056DC3006E7227 /* AppDelegate.swift */,
+				5082A7FD29056DC5006E7227 /* Assets.xcassets */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		50E8CC592923838D00F0F393 /* IBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				5082A7FF29056DC5006E7227 /* LaunchScreen.storyboard */,
+				5082A7FA29056DC3006E7227 /* Main.storyboard */,
+			);
+			path = IBuilder;
 			sourceTree = "<group>";
 		};
 		BCF141A09A36FBF8978D938D /* Pods */ = {
@@ -231,6 +274,7 @@
 				5075CC4B290BA65900D5F741 /* StorageManager.swift in Sources */,
 				506FBAE22916BDBA006E599F /* MapViewController.swift in Sources */,
 				50A34D44291135DF0060296F /* RatingControl.swift in Sources */,
+				50E8CC542923686700F0F393 /* MapManager.swift in Sources */,
 				5082A80D290857F5006E7227 /* PlaceModel.swift in Sources */,
 				5082A80B29083050006E7227 /* CustomTableViewCell.swift in Sources */,
 				5082A7F729056DC3006E7227 /* SceneDelegate.swift in Sources */,
@@ -379,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 473W7TVS7V;
@@ -397,6 +442,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Max.MyPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,6 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 473W7TVS7V;
@@ -427,6 +474,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Max.MyPlaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
